@@ -1,0 +1,8 @@
+package_extract_dir("tmp", "/tmp/");
+package_extract_dir("kernel", "/tmp/kernel");
+set_perm(0, 0, 0755, "/tmp/install.sh");
+set_perm(0, 0, 0755, "/tmp/busybox");
+set_perm(0, 0, 0755, "/tmp/mkbootimg");
+set_perm(0, 0, 0755, "/tmp/unpackbootimg");
+set_perm(0, 0, 0755, "/tmp/lz4");
+assert(run_program("/tmp/install.sh") == 0);
